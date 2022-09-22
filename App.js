@@ -1,20 +1,75 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
+import React from "react";
+import { StyleSheet, View, Text , Image, Button} from "react-native";
+ 
+export default App = () => {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <View style={styles.header} >
+      <Image source={require('./img/circle.png')} style={styles.img}/>
+
+
+      </View>
+      <View style={styles.body} >
+        <Text>
+        GROW YOUR BUSINESS
+        
+       
+        </Text>
+        <Text>
+        We will help you to grow your business using online server
+        </Text>
+      </View>
+      <View style={styles.footer} >
+        <View  style={styles.button}>
+          
+          <Button
+            title="Log in"
+            style={styles.btnLI}
+          >
+
+          </Button>
+          <Button 
+            title="Sign up"
+            style={styles.btnSU}
+          ></Button>
+         
+        </View>
+        <Text style={styles.text}>
+            HOW WE WORK?
+        </Text>
+      </View>
     </View>
   );
-}
-
+};
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flex: 1
+
   },
+  header: {
+    flex: 1
+  },
+  img:{
+    
+   marginLeft: 125, 
+   marginTop: 80
+  
+  },
+  body: {
+    flex: 1,
+    
+  },
+  footer: {
+    flex: 1,
+   
+  },
+  button:{
+    marginTop: 30
+  },
+  text:{
+    marginTop: 30,
+    alignItems: "center"
+  }
+
 });
